@@ -2,10 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:stress_alarm/util/color.dart';
 
 class GradientBackground extends StatelessWidget {
-  final Widget child;
+  final Widget body;
+  final Widget? bottomNavigationBar;
   final String title;
 
-  GradientBackground({required this.child, required this.title});
+  GradientBackground({
+    required this.title,
+    this.bottomNavigationBar,
+    required this.body,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -26,16 +31,8 @@ class GradientBackground extends StatelessWidget {
           title: Text(title),
           backgroundColor: Colors.transparent,
         ),
-        body: Center(
-          child: DefaultTextStyle(
-            style: TextStyle(
-              fontFamily: 'Inter',
-              fontSize: 16.0,
-              color: Colors.white,
-            ),
-            child: child,
-          ),
-        ),
+        body: body,
+        bottomNavigationBar: bottomNavigationBar,
       ),
     );
   }
