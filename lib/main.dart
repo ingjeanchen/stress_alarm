@@ -23,13 +23,7 @@ class MyApp extends StatelessWidget {
       title: 'Stress Alarm',
       theme: ThemeData(
         primarySwatch: generateMaterialColor(Palette.white),
-        textTheme: TextTheme(
-          bodySmall: TextStyle(
-            fontFamily: 'Inter',
-            fontSize: 16.0,
-            color: Colors.white,
-          ),
-        ),
+        fontFamily: 'Roboto',
       ),
       home: LoginPage(),
     );
